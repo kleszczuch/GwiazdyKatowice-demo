@@ -1,0 +1,559 @@
+.athlete-profile__summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 0 28px;
+}
+.athlete-profile__summary dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+.athlete-profile__summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.full-gear-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+.full-gear-check__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  color: #fff;
+}
+.full-gear-check.is-checked .full-gear-check__box {
+  border-color: #2e8b57;
+  background: #2e8b57;
+}
+.profile-photo-row > .profile-photo {
+  flex-shrink: 0;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.profile-photo-row .profile-upload {
+  margin: 0;
+}
+.my-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr));
+  gap: 12px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+.my-photos__item {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.my-photos__item.is-current {
+  border-color: #2e8b57;
+  box-shadow: inset 0 0 0 1px #2e8b57;
+}
+.my-photos__item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.my-photos__item .button.small {
+  width: 100%;
+  min-height: 44px;
+  font-size: 12px;
+  white-space: normal;
+}
+.my-photos__current {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  color: #2e8b57;
+  font-size: 12px;
+  font-weight: 700;
+}
+.profile-photo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.profile-account-actions__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.profile-account-actions__buttons .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.profile-dialog form label {
+  display: block;
+  margin: 12px 0;
+}
+.profile-dialog .profile-section-request form > fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.profile-dialog fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.profile-dialog form .button {
+  margin-top: 8px;
+}
+@media (max-width: 720px) {
+  .profile-dialog input:not([type='checkbox']) {
+    font-size: 16px;
+  }
+}
+.athlete-equipment {
+  container: equipment / inline-size;
+  display: grid;
+  gap: 12px;
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+  min-width: 0;
+}
+.athlete-equipment__legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.equipment-progress {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.equipment-progress__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.equipment-progress__head span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.equipment-progress__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+.equipment-progress__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue);
+  transition: width 0.2s ease;
+}
+.equipment-progress.is-complete .equipment-progress__bar span {
+  background: #2e8b57;
+}
+.equipment-progress__missing {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+.equipment-progress.is-complete .equipment-progress__missing {
+  color: #2e8b57;
+  font-weight: 600;
+}
+.equipment-group {
+  display: grid;
+  gap: 0;
+  min-width: 0;
+}
+.equipment-group + .equipment-group {
+  margin-top: 12px;
+}
+.equipment-group__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+  min-height: 44px;
+}
+.equipment-group__head h4 {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.equipment-group__head .text-button {
+  min-height: 44px;
+}
+.equipment-row {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) minmax(0, auto);
+  align-items: center;
+  gap: 10px 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  min-width: 0;
+}
+.equipment-row__name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.equipment-icon {
+  border-radius: 8px;
+  background: #fff;
+  object-fit: contain;
+}
+.equipment-row__name svg,
+.equipment-row__name img {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+.equipment-row.is-none .equipment-row__name svg,
+.equipment-row.is-none .equipment-row__name img {
+  opacity: 0.45;
+}
+.equipment-row__name > span {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.equipment-row__name strong {
+  overflow-wrap: anywhere;
+}
+.equipment-row__name small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.equipment-row__name .equipment-row__warning {
+  color: #b42318;
+  font-weight: 600;
+}
+[data-theme='dark'] .equipment-row__name .equipment-row__warning {
+  color: #ff9d8f;
+}
+.equipment-row__controls {
+  display: grid;
+  grid-template-columns: 290px 440px;
+  align-items: center;
+  justify-content: end;
+  gap: 8px 16px;
+  min-width: 0;
+}
+.equipment-row__controls .equipment-choice {
+  justify-self: start;
+}
+.equipment-row__controls .equipment-choice--size {
+  flex-wrap: nowrap;
+}
+@container equipment (max-width: 980px) {
+  .equipment-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .equipment-row__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .equipment-row__controls .equipment-choice--size {
+    flex-wrap: wrap;
+  }
+}
+.equipment-choice {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.equipment-choice:disabled {
+  opacity: 0.6;
+}
+.equipment-choice__option {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  cursor: pointer;
+}
+.equipment-choice__option input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+.equipment-choice__option span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  margin-left: -1px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background 0.12s ease,
+    color 0.12s ease;
+}
+.equipment-choice__option:first-of-type span {
+  margin-left: 0;
+  border-radius: 10px 0 0 10px;
+}
+.equipment-choice__option:last-of-type span {
+  border-radius: 0 10px 10px 0;
+}
+.equipment-choice__option:only-of-type span {
+  border-radius: 10px;
+}
+.equipment-choice--size {
+  gap: 6px;
+}
+.equipment-choice--size .equipment-choice__option span,
+.equipment-choice--size .equipment-choice__option:first-of-type span,
+.equipment-choice--size .equipment-choice__option:last-of-type span {
+  min-width: 44px;
+  margin-left: 0;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.equipment-choice__option:hover span {
+  border-color: var(--blue);
+}
+.equipment-choice__option input:focus-visible + span {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  z-index: 1;
+}
+.equipment-choice__option.is-selected span {
+  position: relative;
+  z-index: 1;
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+.equipment-choice__option--own.is-selected span {
+  border-color: #2e8b57;
+  background: #2e8b57;
+}
+.equipment-choice__option--none.is-selected span {
+  border-color: #6d7166;
+  background: #6d7166;
+}
+[data-theme='dark'] .equipment-choice__option.is-selected span {
+  color: #0b0e14;
+}
+[data-theme='dark'] .equipment-choice__option--own.is-selected span {
+  border-color: #58c58d;
+  background: #58c58d;
+}
+[data-theme='dark'] .equipment-choice__option--none.is-selected span {
+  border-color: #a7adba;
+  background: #a7adba;
+}
+.equipment-choice.is-missing .equipment-choice__option span {
+  border-color: #b42318;
+}
+.equipment-save {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px 12px;
+  margin: 8px -22px -22px;
+  padding: 12px 22px;
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 inherit inherit;
+  background: #fff;
+}
+[data-theme='dark'] .equipment-save {
+  background: #1d222c;
+}
+.equipment-save.is-dirty {
+  box-shadow: 0 -8px 20px #0000001a;
+}
+.equipment-save__state {
+  flex: 1 1 220px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.equipment-save.is-dirty .equipment-save__state {
+  color: inherit;
+  font-weight: 600;
+}
+.equipment-save .button {
+  min-height: 44px;
+}
+@media (max-width: 700px) {
+  .equipment-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .equipment-row__controls {
+    justify-content: flex-start;
+  }
+  .equipment-choice--ownership {
+    display: flex;
+    width: 100%;
+  }
+  .equipment-choice--ownership .equipment-choice__option {
+    flex: 1 1 0;
+  }
+  .equipment-choice--ownership .equipment-choice__option span {
+    width: 100%;
+    padding: 0 8px;
+  }
+  .equipment-save .button {
+    flex: 1 1 140px;
+  }
+}
+@media (max-width: 380px) {
+  .athlete-profile__summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .equipment-progress__bar span,
+  .equipment-choice__option span {
+    transition: none;
+  }
+}
+.profile-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.profile-overview > section + section {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.profile-overview__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+.profile-overview__club .athlete-profile__summary {
+  margin-bottom: 0;
+}
+.profile-weapons > form > fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.profile-weapons > form > fieldset > fieldset {
+  margin: 0 0 18px;
+  padding: 16px;
+}
+.profile-weapons label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.profile-weapons label:has(input:not([type='checkbox'])) {
+  flex-direction: column;
+  align-items: stretch;
+}
+.profile-fees {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  white-space: normal;
+  margin-top: 24px;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.profile-fees caption {
+  margin-bottom: 8px;
+  text-align: left;
+  font-weight: 700;
+}
+.profile-fees th,
+.profile-fees td {
+  overflow-wrap: anywhere;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+}
+.profile-fees tr:first-child th,
+.profile-fees tr:first-child td {
+  border-top: 0;
+}
+.profile-fees th {
+  width: 45%;
+  background: transparent;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.profile-fees .dues-amount {
+  font-weight: 700;
+}
+.profile-fees td > p {
+  margin: 0;
+}
+.profile-fees__note {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+@media (max-width: 380px) {
+  .profile-fees,
+  .profile-fees tbody,
+  .profile-fees tr,
+  .profile-fees th,
+  .profile-fees td {
+    display: block;
+    width: 100%;
+  }
+  .profile-fees th {
+    padding-bottom: 0;
+  }
+  .profile-fees td {
+    border-top: 0;
+    padding-top: 4px;
+  }
+}

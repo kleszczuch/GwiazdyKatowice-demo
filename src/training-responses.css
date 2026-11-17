@@ -1,0 +1,106 @@
+.training-responses {
+  min-width: 0;
+}
+.training-responses > h3 {
+  margin: 0 0 16px;
+}
+.training-responses__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.training-responses__group {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+  border-radius: 8px;
+}
+.training-responses__group > h4 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.training-responses__group--yes {
+  border-color: #15803d;
+  background: #f0fdf4;
+}
+.training-responses__group--yes > h4 {
+  color: #166534;
+}
+.training-responses__group--no {
+  border-color: #b91c1c;
+  background: #fef2f2;
+}
+.training-responses__group--no > h4 {
+  color: #991b1b;
+}
+.training-responses__role + .training-responses__role {
+  margin-top: 14px;
+}
+.training-responses__role > h5 {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+}
+.training-responses__role > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.training-responses__role > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+.training-responses__name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.training-responses__avatar {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--ink);
+  font-size: 0.65rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.training-responses__avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.training-responses__avatar img[hidden] {
+  display: none;
+}
+.training-responses__role > p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+[data-theme='dark'] .training-responses__group--yes {
+  border-color: #4ade80;
+  background: #13251b;
+}
+[data-theme='dark'] .training-responses__group--yes > h4 {
+  color: #86efac;
+}
+[data-theme='dark'] .training-responses__group--no {
+  border-color: #f87171;
+  background: #2b191d;
+}
+[data-theme='dark'] .training-responses__group--no > h4 {
+  color: #fca5a5;
+}

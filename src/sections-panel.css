@@ -1,0 +1,165 @@
+.section-manager {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.section-manager__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 16px;
+}
+.section-manager__heading h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.section-manager__heading .muted {
+  max-width: 68ch;
+  margin: 0 0 16px;
+}
+.section-manager__notice {
+  margin: 0 0 16px;
+}
+.section-manager__problem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+.section-manager__problem p {
+  margin: 0;
+  font-size: 13px;
+}
+.section-manager__list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section-manager__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  min-width: 0;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+.section-manager__item:first-child {
+  border-top: 0;
+}
+.section-manager__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.section-manager__summary strong {
+  font-size: 14px;
+}
+.section-manager__item > .button,
+.section-manager__actions > .button {
+  min-height: 44px;
+}
+.section-manager__rename,
+.section-manager__form {
+  width: 100%;
+  min-width: 0;
+}
+.section-manager__rename fieldset,
+.section-manager__form > fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.section-manager__form {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.section-manager__form > fieldset > legend {
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.section-manager__rename label,
+.section-manager__form label {
+  margin: 12px 0 0;
+}
+.section-manager__rename input,
+.section-manager__form input:not([type='radio']) {
+  max-width: 480px;
+}
+.section-manager__rename .muted,
+.section-manager__form .muted {
+  margin: 6px 0 0;
+}
+.section-manager__field-error {
+  min-height: 0;
+  margin: 6px 0 0;
+  color: #a61b1b;
+  font-size: 12px;
+}
+.section-manager__field-error:empty {
+  display: none;
+}
+.section-manager__audience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  min-width: 0;
+  margin: 16px 0 0;
+  padding: 0;
+  border: 0;
+}
+.section-manager__audience > legend {
+  padding: 0;
+  font-size: 11px;
+  color: #656353;
+}
+.section-manager__audience .checkbox-label {
+  min-height: 44px;
+  margin: 0;
+  font-size: 13px;
+}
+.section-manager__audience input[type='radio'] {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--blue);
+}
+.section-manager__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+[data-theme='dark'] .section-manager__field-error {
+  color: #ffb4ad;
+}
+[data-theme='dark'] .section-manager__audience > legend {
+  color: #a7adba;
+}
+@media (max-width: 480px) {
+  .section-manager {
+    padding: 16px;
+  }
+  .section-manager__heading > .button,
+  .section-manager__item > .button,
+  .section-manager__actions > .button {
+    width: 100%;
+  }
+  .section-manager__form {
+    padding: 12px;
+  }
+}

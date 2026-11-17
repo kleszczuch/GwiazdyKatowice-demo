@@ -1,0 +1,169 @@
+.equipment-panel fieldset {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+  margin: 18px 0;
+}
+.equipment-panel legend {
+  font-weight: 600;
+  padding: 0 6px;
+}
+.equipment-panel select {
+  max-width: 100%;
+}
+.equipment-person {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+}
+.equipment-person summary {
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.equipment-panel h3 {
+  margin-top: 24px;
+}
+@media (max-width: 600px) {
+  .equipment-panel fieldset {
+    padding: 12px;
+  }
+  .equipment-panel select {
+    width: 100%;
+  }
+}
+.equipment-summary-group {
+  margin: 20px 0;
+  min-width: 0;
+}
+.equipment-summary-group h4 {
+  margin: 0 0 10px;
+}
+.equipment-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.equipment-table-scroll:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 3px;
+}
+.equipment-demand-table,
+.equipment-declaration-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.equipment-demand-table th,
+.equipment-demand-table td,
+.equipment-declaration-table th,
+.equipment-declaration-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.equipment-demand-table thead,
+.equipment-declaration-table thead {
+  background: color-mix(in srgb, #ec4899 9%, transparent);
+}
+.equipment-demand-table tbody tr:last-child > *,
+.equipment-declaration-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.equipment-table-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+.equipment-table-label svg {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+.equipment-quantity {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.equipment-size-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.equipment-size-count {
+  white-space: nowrap;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.equipment-own-warning {
+  display: block;
+  margin-top: 5px;
+  color: #ec4899;
+  font-size: 0.85rem;
+}
+.equipment-person .equipment-table-scroll {
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .equipment-demand-table th,
+  .equipment-demand-table td,
+  .equipment-declaration-table th,
+  .equipment-declaration-table td {
+    padding: 10px;
+  }
+}
+.equipment-panel__modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.equipment-panel__today {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.club-stock fieldset {
+  margin: 0 0 18px;
+  padding: 4px 16px 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.club-stock legend {
+  padding: 0 8px;
+  font-weight: 700;
+}
+.club-stock__item {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+}
+.club-stock__item + .club-stock__item {
+  border-top: 1px solid var(--border);
+}
+.club-stock__sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.club-stock__sizes label {
+  width: 68px;
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+}
+.club-stock__sizes input {
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .club-stock__item {
+    grid-template-columns: 1fr;
+  }
+}

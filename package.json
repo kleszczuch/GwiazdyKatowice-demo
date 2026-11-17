@@ -1,0 +1,35 @@
+{
+  "name": "gwiazdy-katowice-portal-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.13.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\" \"*.{json,ts,js,html}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\" \"*.{json,ts,js,html}\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.3",
+    "lucide-react": "^1.25.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "^9",
+    "eslint-plugin-react-hooks": "^7",
+    "prettier": "3.9.10",
+    "typescript": "^5",
+    "typescript-eslint": "^8",
+    "vite": "8.3.4"
+  }
+}

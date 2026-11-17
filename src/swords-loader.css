@@ -1,0 +1,253 @@
+.swords-loader {
+  --sword-blade: #d3d8e0;
+  --sword-edge: #5d6470;
+  --sword-gold: #a08a3e;
+  --sword-grip: #5a4632;
+  --sword-spark: #e0a800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  color: var(--sword-edge);
+}
+[data-theme='dark'] .swords-loader {
+  --sword-blade: #e3e7ee;
+  --sword-edge: #a7adba;
+  --sword-gold: #d8bf63;
+  --sword-grip: #8b6f52;
+  --sword-spark: #ffe822;
+}
+.swords-loader__art {
+  display: block;
+  width: 72px;
+  height: 60px;
+  overflow: visible;
+}
+.swords-loader--large {
+  padding: 32px 0;
+}
+.swords-loader--large .swords-loader__art {
+  width: 120px;
+  height: 100px;
+}
+.swords-loader--small {
+  display: inline-flex;
+  padding: 0;
+  vertical-align: middle;
+}
+.swords-loader--small .swords-loader__art {
+  width: 30px;
+  height: 25px;
+}
+.swords-loader__blade {
+  fill: var(--sword-blade);
+  stroke: var(--sword-edge);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+.swords-loader__fuller {
+  fill: none;
+  stroke: var(--sword-edge);
+  stroke-width: 0.8;
+  opacity: 0.55;
+}
+.swords-loader__guard {
+  fill: none;
+  stroke: var(--sword-gold);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.swords-loader__pommel {
+  fill: var(--sword-gold);
+}
+.swords-loader__grip {
+  fill: none;
+  stroke: var(--sword-grip);
+  stroke-width: 4.4;
+  stroke-linecap: round;
+}
+.swords-loader__sword {
+  transform-box: view-box;
+  animation: swords-loader-left 1.6s ease-in-out infinite;
+}
+.swords-loader__sword--left {
+  transform-origin: 20px 90px;
+}
+.swords-loader__sword--right {
+  transform-origin: 100px 90px;
+  animation-name: swords-loader-right;
+}
+.swords-loader__spark {
+  fill: none;
+  stroke: var(--sword-spark);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  transform-box: view-box;
+  transform-origin: 60px 56px;
+  opacity: 0;
+  animation: swords-loader-spark 1.6s ease-out infinite;
+}
+@keyframes swords-loader-left {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  40% {
+    transform: rotate(52deg);
+  }
+  48% {
+    transform: rotate(44deg);
+  }
+  56% {
+    transform: rotate(50deg);
+  }
+}
+@keyframes swords-loader-right {
+  0%,
+  100% {
+    transform: rotate(6deg);
+  }
+  40% {
+    transform: rotate(-52deg);
+  }
+  48% {
+    transform: rotate(-44deg);
+  }
+  56% {
+    transform: rotate(-50deg);
+  }
+}
+@keyframes swords-loader-spark {
+  0%,
+  37% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  41% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  55% {
+    opacity: 0.7;
+    transform: scale(0.8);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.swords-loader--medium,
+.swords-loader--large {
+  flex-direction: column;
+  gap: 6px;
+}
+.swords-loader--large {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  padding: 0;
+  background: #f4f4ee;
+}
+[data-theme='dark'] .swords-loader--large {
+  background: #13161c;
+}
+.main-shell .swords-loader--large {
+  inset: 76px 0 0 250px;
+  z-index: 20;
+}
+@media (max-width: 1200px) {
+  .main-shell .swords-loader--large {
+    left: 220px;
+  }
+}
+@media (max-width: 720px) {
+  .main-shell .swords-loader--large {
+    inset: 65px 0 0;
+  }
+  [data-nav='bottom'] .main-shell .swords-loader--large {
+    inset: 0 0 calc(65px + env(safe-area-inset-bottom));
+  }
+}
+.swords-loader__captions {
+  position: relative;
+  display: block;
+  min-width: 13rem;
+  height: 1.5em;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  text-align: center;
+}
+.swords-loader--large .swords-loader__captions {
+  font-size: 15px;
+}
+.swords-loader__caption {
+  position: absolute;
+  inset: 0;
+  white-space: nowrap;
+  opacity: 0;
+  animation: swords-loader-caption 25.6s ease-in-out infinite both;
+}
+.swords-loader__caption:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.swords-loader__caption:nth-child(3) {
+  animation-delay: 6.4s;
+}
+.swords-loader__caption:nth-child(4) {
+  animation-delay: 9.6s;
+}
+.swords-loader__caption:nth-child(5) {
+  animation-delay: 12.8s;
+}
+.swords-loader__caption:nth-child(6) {
+  animation-delay: 16s;
+}
+.swords-loader__caption:nth-child(7) {
+  animation-delay: 19.2s;
+}
+.swords-loader__caption:nth-child(8) {
+  animation-delay: 22.4s;
+}
+@keyframes swords-loader-caption {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  1.5%,
+  11% {
+    opacity: 1;
+    transform: none;
+  }
+  12.5%,
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .swords-loader__caption {
+    animation: none;
+  }
+  .swords-loader__caption:first-child {
+    opacity: 1;
+  }
+  .swords-loader__sword,
+  .swords-loader__spark {
+    animation: none;
+  }
+  .swords-loader__sword--left {
+    transform: rotate(50deg);
+  }
+  .swords-loader__sword--right {
+    transform: rotate(-50deg);
+  }
+}

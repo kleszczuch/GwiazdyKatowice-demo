@@ -1,0 +1,72 @@
+.stat-card.home-fees {
+  flex: 2 1 18rem;
+}
+.home-fees__person + .home-fees__person {
+  margin-top: 12px;
+}
+.home-fees__name {
+  display: block;
+  margin-bottom: 8px;
+}
+.home-fees__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.home-fees__columns > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.home-fees__columns .dues-summary {
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding: 0;
+  border-top: 0;
+}
+.home-fees__columns strong {
+  font-size: 12px;
+}
+.home-fees__columns .status-text,
+.home-fees__columns .dues-amount {
+  font-size: 16px;
+  overflow-wrap: break-word;
+}
+.home-fees__link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 16px;
+}
+.home-fees__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 720px) {
+  .home-fees__link {
+    min-height: 44px;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .home-fees__columns {
+    gap: 10px;
+  }
+  .home-fees__columns .status-text,
+  .home-fees__columns .dues-amount {
+    font-size: 15px;
+  }
+  .home-fees__link {
+    margin-top: 4px;
+  }
+}

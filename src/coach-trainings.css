@@ -1,0 +1,39 @@
+.coach-leading-trainings {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.coach-leading-trainings li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line, #e5e7eb);
+}
+
+.coach-leading-trainings li:last-child {
+  border-bottom: 0;
+}
+
+.coach-leading-trainings p {
+  margin: 0.3rem 0 0;
+}
+
+.coach-leading-trainings button {
+  text-align: left;
+}
+
+.coach-training-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.coach-training-pagination span {
+  font-size: 12px;
+  color: var(--muted);
+}

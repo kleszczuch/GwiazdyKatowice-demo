@@ -1,0 +1,37 @@
+.profile-disclosure {
+  padding: 0;
+}
+
+.profile-disclosure > summary {
+  padding: 20px 22px;
+  cursor: pointer;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.profile-disclosure__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100% - 24px);
+  vertical-align: middle;
+}
+
+.profile-disclosure__title > svg {
+  flex-shrink: 0;
+}
+
+.profile-disclosure__content {
+  padding: 0 22px 22px;
+  min-width: 0;
+}
+
+.profile-disclosure:not([open]) > .profile-disclosure__content {
+  display: none;
+}
+
+.profile-disclosure summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+  border-radius: 8px;
+}
